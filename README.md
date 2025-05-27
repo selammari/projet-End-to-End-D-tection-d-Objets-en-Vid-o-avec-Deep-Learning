@@ -1,34 +1,45 @@
-# Project Name
+# YOLOv8 Video Object Detection – Streamlit App
 
-This project is an POC implementation of video object detection using OpenCV and YOLOv8. The code uses M1 Apple MacBook GPU. In case you have another GPU or want to use CPU, please update the DEVICE variable in `detect_objects.py`.
+This project is a Proof of Concept (POC) for real-time object detection in videos using **YOLOv8** and **OpenCV**, wrapped in an interactive **Streamlit** web application. It allows users to upload a video and see object detection in action (e.g., car, person, dog).
 
-## Table of Contents
+> The code is compatible with both CPU and GPU. If using GPU (CUDA), set the `DEVICE` variable accordingly in `app.py`.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+---
+
+## 📽️ Video Presentation
+
+A video presentation that goes through the environment setup, code explanation, and demo. The video does not exceed 7 minutes:  
+👉 [Watch the presentation here](https://drive.google.com/file/d/1V4_DVw1Pie0U7_zk-SFJ-GZM7qSYlvay/view?usp=drive_link)
+
+---
+
+## 📁 Table of Contents
+
+- [Features](#features)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Video Demo](#video-presentation)  
+- [Contributing](#contributing)  
 - [License](#license)
 
-## Installation
+---
 
-To install and set up the project, follow these steps:
+## 🚀 Features
 
-1. Clone the repository: `$ git clone https://github.com/jansonz/yolov8-video-object-detection`
-2. Navigate to the project directory: `$ cd yolov8-video-object-detection`
-3. Install the required dependencies: `$ pip install -r requirements.txt`
+- Web-based user interface via **Streamlit**
+- Upload and process video files (`.mp4`, `.avi`, `.mov`)
+- Real-time object detection using **YOLOv8m**
+- Detection limited to selected target classes: `car`, `person`, `dog`
+- Runs on **CPU or GPU**
+- Displays bounding boxes with confidence scores
 
-## Usage
+---
 
-To use the project, follow these steps:
+## 🛠️ Installation
 
-1. Prepare a video file for object detection.
-2. Change the VIDEO_SOURCE path variable in the `detect_objects.py` file to point to the video file. Many sources are supported i.e webcam, a local file or a live stream.
-3. Run the scene detection script: `$ python detect_objects.py`. The YOLO ML model will be downloaded automatically.
+To install and run the project locally:
 
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/jansonz/yolov8-video-object-detection
+   cd yolov8-video-object-detection
